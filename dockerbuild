@@ -1,2 +1,2 @@
-docker build -t kushwap1/blog-v1.0:$BUILD_NUMBER
-docker push
+docker build -t kushwap1/blog-v1.0:$BUILD_NUMBER .
+docker push kushwap1/blog-v1.0:$BUILD_NUMBER
