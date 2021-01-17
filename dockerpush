@@ -1,0 +1,1 @@
+sudo -A docker push kushwap1/blog-v1.0:$BUILD_NUMBER
