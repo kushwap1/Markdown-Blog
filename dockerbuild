@@ -1,2 +1,3 @@
 sudo -A docker build -t kushwap1/blog-v1.0:$BUILD_NUMBER .
+docker login --username kushwap1 --password hp?w078()
 sudo -A docker push kushwap1/blog-v1.0:$BUILD_NUMBER
