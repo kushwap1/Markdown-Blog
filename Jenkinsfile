@@ -6,8 +6,7 @@ node {
 	  docker.withRegistry('', 'dockerhub') {
             sh "docker push kushwap1/blog-v1.0:$BUILD_NUMBER"
 	    sh "docker image rm -f kushwap1/blog-v1.0:$BUILD_NUMBER"
-	    sh "kubectl set image deployment blog-nodejs-deployment blog-v1="
-		  // some block
+	     // some block
 	  }
     }
     stage('Deploy') {
