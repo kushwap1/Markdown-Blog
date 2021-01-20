@@ -11,7 +11,8 @@ node {
     }
     stage('Deploy') {
         sshagent (credentials: ['Kube_master']) {
-          sh 'ssh -o StrictHostKeyChecking=no -l cloud_user 172.31.29.238 kubectl set image deployment blog-nodejs-deployment blog-v1=kushwap1/blog-v1.0:$BUILD_NUMBER'
+          sh 'ssh -o StrictHostKeyChecking=no -l cloud_user 172.31.29.238 kubectl set image deployment blog-nodejs-deployment blog-v1=kushwap1/blog-v1.0:$BUILD_NUMBER --record'
          }
        }
 }
+ 
